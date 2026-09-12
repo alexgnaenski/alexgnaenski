@@ -39,18 +39,6 @@ Architected and integrated **AgentKit**, a code-first AI orchestration engine on
 - **🛡️ H3 Technologies (Digital Safety)**: Designed and led development of cross-platform parental control applications (Web, Android, Chrome/Firefox extensions) with real-time content monitoring and WCF/REST backend services.
 - **📡 Cincinnati Bell / Friendly Technology (IoT/Device Mgmt)**: Built TR-069 ACS Management Consoles and Device Management services to remotely provision, diagnose, and manage hundreds of thousands of residential gateways and IoT devices.
 
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=alexgnaenski&show_icons=true&theme=dark&hide_border=true&title_color=0078D4&icon_color=0078D4" alt="Alex's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-languages/?username=alexgnaenski&layout=compact&theme=dark&hide_border=true&title_color=0078D4&text_color=ffffff" alt="Top Languages" />
-</div>
-
-*(Note: Stats update dynamically. If you keep most of your work in private repos, consider pinning your best public repositories to your profile to make these stats more representative!)*
-
----
 
 ## 💡 Leadership & Management Philosophy
 - **Agile Excellence**: Deep expertise in Scrum, backlog refinement, Jira/JQL automation, and removing roadblocks for 10–15 person cross-functional teams (Dev, QA, BA, DevOps).
