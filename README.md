@@ -135,10 +135,10 @@ goodsloading_workflow.json
 I'm always open to discussing AI orchestration, .NET architecture, Agile product management, or innovative logistics solutions.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/alexgnaensky/" target="_blank">
+  <a href="https://www.linkedin.com/in/alexander-gnaensky-40664b" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="mailto:your.email@example.com" target="_blank">
+  <a href="mailto:marketpipes@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="http://www.goodsloading.com/" target="_blank">
