@@ -19,6 +19,89 @@ Architected and integrated **AgentKit**, a code-first AI orchestration engine on
 - **AI Orchestration**: Designed a JSON-driven model to dynamically coordinate domain-specific AI agents for document parsing, 3D load optimization, weight/volume compliance validation, and automated report generation.
 
 ---
+### [**AgentKit**]
+A modular, multi-agent orchestration framework built on the Microsoft Agent Framework for .NET. Enables configuration-driven AI workflows, human-in-the-loop (HITL) interactions, and robust multi-agent collaboration
+AgentKit supports declarative JSON workflow definitions, multi-agent GroupChat orchestration, Human-in-the-Loop (HITL) approval gates, and resilient state checkpointing.
+
+
+### How Goodsloading Utilizes AgentKit
+The Goodsloading application is a domain-specific logistics platform designed to optimize cargo placement. Rather than hardcoding AI logic, Goodsloading delegates its complex reasoning, data extraction, and compliance validation to AgentKit, a standalone, multi-agent AI orchestration engine built on the Microsoft Agent Framework.
+Goodsloading interacts with AgentKit by passing declarative JSON workflow definitions (see goodsloading_workflow.json). AgentKit's WorkflowBuilderService parses this JSON, compiles it into an executable directed graph, and orchestrates the execution flow.
+
+goodsloading_workflow.json
+
+```json
+{
+  "workflowId": "CargoOptimization",
+  "Id": "CO1",
+  "name": "Cargo Optimization Pipeline",
+  "description": "Extract cargo specifications, verify compliance, and generate optimized 3D loading plans",
+  "version": "1.0.0",
+  "orchestrationType": "sequential",
+  "steps": [
+    {
+      "id": "step_0",
+      "executor": {
+        "executorId": "ContextInitializerExecutor",
+        "description": "Load JSON workflow into context"
+      }
+    },
+    {
+      "id": "step_1",
+      "executor": {
+        "executorId": "DocumentUploadExecutor",
+        "description": "Upload cargo manifest or shipping documents (BOL or packing list)",
+        "input": {
+          "FilePath": ""
+        }
+      }
+    },
+    {
+      "id": "step_2",
+      "skipStep": false,
+      "executionMode": "groupchat",
+      "agents": [
+        {
+          "agentId": "CargoExtractionAgent",
+          "description": "Extract and analyze cargo specifications - AI parsing dimensions, weight, and cargo types",
+          "enableHitL": false,
+          "instructions": {
+            "System": "You are a cargo data extraction specialist. Extract dimensions, weight, cargo types, and specifications from shipping documents.",
+            "User": "Analyze the uploaded cargo manifest or packing list. Extract all cargo items with their dimensions (length, width, height), weight, cargo type, fragility, stacking restrictions, and any special handling requirements. Return structured data for each item."
+          },
+          "model": {
+            "provider": "ollama",
+            "modelId": "llama3.1:8b-instruct-q4_K_M"
+          }
+        },
+        {
+          "agentId": "CargoValidationAgent",
+          "description": "Verify compliance with loading constraints - checking axle limits, volume capacity, and safety rules",
+          "instructions": {
+            "System": "You are a cargo compliance validator. Verify that cargo meets all loading constraints including axle weight limits, volume capacity, safety regulations, and distribution requirements.",
+            "User": "Review the extracted cargo specifications. Verify compliance with: 1) Axle weight limits, 2) Total volume capacity, 3) Weight distribution balance, 4) Safety regulations, 5) Hazardous material restrictions. Flag any violations and suggest corrections."
+          },
+          "model": {
+            "provider": "ollama",
+            "modelId": "llama3.1:8b-instruct-q4_K_M"
+          }
+        }
+      ]
+    },
+    {
+      "id": "step_3",
+      "executor": {
+        "executorId": "LoadingPlanGeneratorExecutor",
+        "description": "Generate optimized 3D loading plan visualization",
+        "input": {
+          "OutputFormat": "3D_VISUALIZATION"
+        }
+      }
+    }
+  ]
+}
+```
+
 
 ## 🛠️ Tech Stack & Tools
 
