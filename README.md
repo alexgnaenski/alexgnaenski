@@ -6,7 +6,15 @@
 ---
 
 ## 👨‍💻 About Me
-I am a seasoned technology leader and software architect with over 20 years of experience building scalable solutions across **AI-driven logistics, FinTech, Healthcare (FHIR), and IoT**. I specialize in leading cross-functional Agile teams, orchestrating AI-driven workflows, and architecting robust .NET/C# microservices. My passion lies in transforming manual, legacy processes into zero-configuration, autonomous digital pipelines that deliver measurable business value.
+
+I am a seasoned Technology Leader, Software Architect, and Product Manager with over 20 years of experience delivering end-to-end digital solutions. I specialize in bridging the gap between complex business challenges and elegant, scalable technical execution. 
+
+**Core Solutions & Services I Provide:**
+- **End-to-End Product Delivery:** Guiding products from UI/UX prototyping and system architecture to scalable .NET/C# microservices and automated CI/CD deployment.
+- **AI & Workflow Automation:** Designing autonomous, zero-configuration pipelines (e.g., AI document parsing, 3D load optimization) that replace manual legacy processes and drive operational efficiency.
+- **Agile Leadership & Process Optimization:** Building, mentoring, and empowering cross-functional teams (10–15+ engineers, QA, BA, DevOps). Expert in optimizing Jira workflows, reducing cycle times, and aligning technical roadmaps with business KPIs.
+- **Complex System Integration:** Architecting robust REST/OpenAPI services and executing seamless, risk-managed data migrations into modern industry standards (e.g., Healthcare FHIR, FinTech platforms).
+- **Device management/IoT:** Developing comprehensive device management/telemetry
 
 ---
 
@@ -132,7 +140,10 @@ goodsloading_workflow.json
 
 ## 🤝 Let's Connect
 
-I'm always open to discussing AI orchestration, .NET architecture, Agile product management, or innovative logistics solutions.
+**Currently available for new full-time roles, freelance projects, and business opportunities!** 
+
+I'm always eager to connect with founders, engineering leaders, and innovators. Let's discuss how we can build scalable solutions together, or dive deep into AI orchestration, .NET architecture, Agile product management, and innovative logistics pipelines.
+
 
 <p align="center">
   <a href="https://www.linkedin.com/in/alexander-gnaensky-40664b" target="_blank">
